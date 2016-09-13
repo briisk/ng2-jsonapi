@@ -40,6 +40,10 @@ export class AppComponent {
 }
 ```
 
+# Documentation
+
+[TypeDoc Documentation](https://briisk.github.io/ng2-jsonapi/doc/modules/_ng2_jsonapi_.html)
+
 # Development:
 
 ## Requirements:
