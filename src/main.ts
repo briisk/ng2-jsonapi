@@ -1,2 +1,2 @@
-export * from './http-wrapper/http-wrapper';
-export * from './http-wrapper/http-wrapper.module';
+export * from './ng2-jsonapi/ng2-jsonapi';
+export * from './ng2-jsonapi/ng2-jsonapi.module';

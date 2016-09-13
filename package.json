@@ -84,7 +84,10 @@
     "@angular/platform-browser": "2.0.0-rc.6",
     "@angular/platform-browser-dynamic": "2.0.0-rc.6",
     "@angular/platform-server": "2.0.0-rc.6",
+    "@briisk/http-wrapper": "^0.1.2",
     "core-js": "^2.4.0",
+    "inflected": "^1.1.7",
+    "jsonapi-serializer": "99four/jsonapi-serializer",
     "rxjs": "5.0.0-beta.11",
     "zone.js": "~0.6.17"
   },
