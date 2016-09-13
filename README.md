@@ -1,20 +1,20 @@
 Workspace build status:
 
-[![Build Status](https://semaphoreci.com/api/v1/briisk-co/http-wrapper/branches/master/badge.svg)](https://semaphoreci.com/briisk-co/http-wrapper)
+[![Build Status](https://semaphoreci.com/api/v1/briisk-co/ng2-jsonapi/branches/master/badge.svg)](https://semaphoreci.com/briisk-co/ng2-jsonapi)
 
-Http Wrapper for Angular 2
+Implementation of JSON API for Angular 2
 
 # Usage:
 
 ```
-    npm install --save @briisk/http-wrapper
+    npm install --save @briisk/ng2-jsonapi
 ```
 
 ```
-    import { HttpWrapperModule } from '@briisk/http-wrapper';
+    import { JSONAPIModule } from '@briisk/ng2-jsonapi';
 
     @NgModule({
-        imports: [ HttpWrapperModule ],
+        imports: [ JSONAPIModule ],
         declarations: [ AppComponent ],
         bootstrap: [ AppComponent ]
     })
@@ -24,23 +24,21 @@ Http Wrapper for Angular 2
 ```
 export class AppComponent {
 
-  constructor(private httpWrapper: HttpWrapper) {
-    this.httpWrapper.get('someUrl').subscribe((request) => {
+  constructor(private jsonapi: JSONAPI) {
+    this.jsonapi.get('someUrl').subscribe((request) => {
         console.log(request);
     });
 
-    this.httpWrapper.post('someUrl', {
+    const data = {
         some: 'data'
-    }).subscribe((request) => {
+    }
+    const payload = new JSONAPIObject(data, 'collectionName', ['some']);
+    this.jsonapi.post('someUrl', payload).subscribe((request) => {
         console.log(request);
     });
   }
 }
 ```
-
-# Documentation
-
-[TypeDoc Documentation](https://briisk.github.io/http-wrapper/doc/classes/_http_wrapper_.httpwrapper.html)
 
 # Development:
 
@@ -50,7 +48,7 @@ export class AppComponent {
 
 ## How to install:
 ```
-git clone --recursive https://github.com/briisk/http-wrapper
+git clone --recursive https://github.com/briisk/ng2-jsonapi
 npm run copy-config
 npm install
 ```
