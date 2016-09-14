@@ -88,12 +88,12 @@
     "core-js": "^2.4.0",
     "inflected": "^1.1.7",
     "jsonapi-serializer": "99four/jsonapi-serializer",
-    "rxjs": "5.0.0-beta.12",
+    "rxjs": "5.0.0-beta.11",
     "zone.js": "~0.6.17"
   },
   "devDependencies": {
     "angular2-hmr": "~0.8.0",
-    "awesome-typescript-loader": "~2.2.4",
+    "awesome-typescript-loader": "~1.1.1",
     "codelyzer": "~0.0.23",
     "compression-webpack-plugin": "^0.3.1",
     "copy-webpack-plugin": "3.0.1",
