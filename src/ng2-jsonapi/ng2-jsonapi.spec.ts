@@ -129,7 +129,7 @@ describe('Service: JSONAPI', () => {
           {
             status: '422',
             source: { 'pointer': '/data/attributes/first-name' },
-            title:  'Invalid Attribute',
+            title: 'Invalid Attribute',
             detail: 'First name must contain at least three characters.'
           }
         ]
@@ -141,9 +141,9 @@ describe('Service: JSONAPI', () => {
           connection.mockError(new Response(response));
         });
 
-      service.get(url).subscribe(() => {}, (err) => {
-        (<any>errorData.errors).details = [ 'First name must contain at least three characters.' ];
-        expect(err).toEqual(errorData.errors);
+      service.get(url).subscribe(() => {
+      }, (err) => {
+        expect(err.errors).toEqual(errorData.errors);
         done();
       });
     });
