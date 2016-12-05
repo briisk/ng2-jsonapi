@@ -2,8 +2,8 @@
   "name": "@briisk/ng2-jsonapi",
   "version": "0.2.2",
   "description": "",
-  "main": "./src/main.ts",
-  "typings": "./src/main.ts",
+  "main": "./index.ts",
+  "typings": "./index.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/briisk/ng2-jsonapi.git"
