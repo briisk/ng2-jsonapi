@@ -61,7 +61,7 @@ export class JSONAPIObject {
       .forEach((key) => {
         this.relations[key] = {
           attributes: Object.keys(!!data[key].length ? data[key][0] : data[key]),
-          ref: (parent, relationObject) => relationObject.id
+          ref: (_, relationObject) => relationObject.id
         };
       });
   }
