@@ -1,5 +1,3 @@
-import { Subject, ReplaySubject, BehaviorSubject, Observable } from 'rxjs';
-
 import { HttpWrapper } from '@briisk/http-wrapper';
 import { JSONAPI, JSONAPIObject } from './ng2-jsonapi';
 import { BaseRequestOptions, Http, Response, ResponseOptions, HttpModule } from '@angular/http';
@@ -452,7 +450,7 @@ describe('Service: JSONAPI', () => {
 
       requestData = new JSONAPIObject(obj, name, ['firstName', 'address'], {
         address: {
-          ref: (user, address) => address.id,
+          ref: (_, address) => address.id,
           attributes: ['zipCode']
         }
       });
