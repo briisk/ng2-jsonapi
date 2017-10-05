@@ -1,6 +1,6 @@
 {
   "name": "@briisk/ng2-jsonapi",
-  "version": "0.2.7",
+  "version": "0.3.0",
   "description": "",
   "main": "./js/index.js",
   "typings": "./js/index.d.ts",
