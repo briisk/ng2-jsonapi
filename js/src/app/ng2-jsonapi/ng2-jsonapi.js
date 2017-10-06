@@ -1,16 +1,6 @@
-"use strict";
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var core_1 = require("@angular/core");
-var rxjs_1 = require("rxjs");
-var http_wrapper_1 = require("@briisk/http-wrapper");
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpWrapper } from '@briisk/http-wrapper';
 var serializer = require('jsonapi-serializer').Serializer;
 var deserializer = require('jsonapi-serializer').Deserializer;
 var inflector = require('inflected');
@@ -25,7 +15,7 @@ var JSONAPIRequest = (function () {
     };
     return JSONAPIRequest;
 }());
-exports.JSONAPIRequest = JSONAPIRequest;
+export { JSONAPIRequest };
 var JSONAPIError = (function () {
     function JSONAPIError(status, errors) {
         this.status = status;
@@ -33,7 +23,7 @@ var JSONAPIError = (function () {
     }
     return JSONAPIError;
 }());
-exports.JSONAPIError = JSONAPIError;
+export { JSONAPIError };
 var JSONAPIObject = (function () {
     function JSONAPIObject(data, name, attrs, relations, meta) {
         if (relations === void 0) { relations = {}; }
@@ -77,7 +67,7 @@ var JSONAPIObject = (function () {
     };
     return JSONAPIObject;
 }());
-exports.JSONAPIObject = JSONAPIObject;
+export { JSONAPIObject };
 var JSONAPI = (function () {
     function JSONAPI(httpWrapper) {
         this.httpWrapper = httpWrapper;
@@ -141,7 +131,7 @@ var JSONAPI = (function () {
         var deserializeObject = Object.assign({
             keyForAttribute: 'camelCase'
         }, relationshipsObject);
-        return rxjs_1.Observable.create(function (observer) {
+        return Observable.create(function (observer) {
             var httpSubscription = http
                 .subscribe(function (data) {
                 if (typeof data.json === 'function') {
@@ -180,9 +170,12 @@ var JSONAPI = (function () {
     };
     return JSONAPI;
 }());
-JSONAPI = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [http_wrapper_1.HttpWrapper])
-], JSONAPI);
-exports.JSONAPI = JSONAPI;
-//# sourceMappingURL=/Users/dako/briisk/ng2/ng2-jsonapi/src/app/ng2-jsonapi/ng2-jsonapi.js.map
+export { JSONAPI };
+JSONAPI.decorators = [
+    { type: Injectable },
+];
+/** @nocollapse */
+JSONAPI.ctorParameters = function () { return [
+    { type: HttpWrapper, },
+]; };
+//# sourceMappingURL=ng2-jsonapi.js.map
