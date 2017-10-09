@@ -1,9 +1,8 @@
 {
   "name": "@briisk/ng2-jsonapi",
-  "version": "0.5.0",
+  "version": "0.4.2",
   "description": "",
-  "main": "./js/index.js",
-  "typings": "./js/index.d.ts",
+  "main": "./release/bundles/ng2-jsonapi.umd.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/briisk/ng2-jsonapi.git"
@@ -41,7 +40,7 @@
     "@angular/platform-browser": "^4.1.3",
     "@angular/platform-browser-dynamic": "^4.1.3",
     "@angular/router": "^4.1.3",
-    "@briisk/http-wrapper": "^0.6.1",
+    "@briisk/http-wrapper": "^0.6.2",
     "core-js": "^2.4.1",
     "inflected": "^2.0.1",
     "jsonapi-serializer": "99four/jsonapi-serializer",
