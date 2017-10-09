@@ -1,6 +1,6 @@
 {
   "name": "@briisk/ng2-jsonapi",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "",
   "main": "./release/bundles/ng2-jsonapi.umd.js",
   "repository": {
